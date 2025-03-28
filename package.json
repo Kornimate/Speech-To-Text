@@ -3,8 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@emotion/css": "^11.13.5",
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.0",
+    "@mui/icons-material": "^7.0.1",
     "@mui/material": "^7.0.0",
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
@@ -14,6 +16,7 @@
     "react-dom": "^19.0.0",
     "react-scripts": "5.0.1",
     "slate": "^0.112.0",
+    "slate-history": "^0.110.3",
     "slate-react": "^0.112.1",
     "web-vitals": "^2.1.4"
   },
