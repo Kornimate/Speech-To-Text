@@ -4,7 +4,7 @@ import MainComponent from "./components/MainComponent";
 function App() {
   return (
     <div className="App">
-      <main class="App-header">
+      <main className="App-header">
         <MainComponent />
       </main>
     </div>
