@@ -109,4 +109,45 @@ const ConfirmDeleteModal = ({ opened, setOpened, callback }) => {
   );
 }
 
-export { ErrorModal, ConfirmDeleteModal };
+const GetFileNameModal = ({ opened, setOpened, callback }) => {
+  const [open, setOpen] = React.useState(false);
+  const handleClose = () => {
+      setOpened(false);
+      setOpen(false);
+  }
+
+  function handleDelete(){
+    callback()
+    handleClose()
+  }
+
+  React.useEffect(() => {
+      setOpen(opened)
+  },[opened])
+
+  return (
+    <div>
+      <Modal
+        open={open}
+        onClose={handleClose}
+        aria-labelledby="modal-modal-title"
+        aria-describedby="modal-modal-description"
+      >
+        <Box sx={style2}>
+          <Typography id="modal-modal-title" variant="h6" component="h2">
+            Szövegdoboz tartalmának törlése
+          </Typography>
+          <Typography id="modal-modal-description" sx={{ mt: 2 }}>
+            Biztosan tötölni akarja a teljes tartalmát a szövegdoboznak?
+          </Typography>
+          <Stack direction="row" spacing={4} sx={{mt: 2, display:"flex", justifyContent:"end"}}>
+            <Button endIcon={<Close />} onClick={handleClose} variant='outlined' color='secondary'>Mégse</Button>
+            <Button endIcon={<Delete />} onClick={handleDelete} variant='outlined' color='error'>Törlés</Button>
+          </Stack>
+        </Box>
+      </Modal>
+    </div>
+  );
+}
+
+export { ErrorModal, ConfirmDeleteModal, GetFileNameModal };

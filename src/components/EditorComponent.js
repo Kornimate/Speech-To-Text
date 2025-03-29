@@ -7,6 +7,8 @@ import { Button, Icon, Toolbar, } from './EditorAsseblyComponents'
 import { Box } from '@mui/material'
 import HandleNewSpeechToTextInput from "../services/SpeechService";
 import * as StorageService from "../services/StorageService"
+import * as ClipBoardService from "../services/ClipBoardService"
+import * as FileService from "../services/FileSaverService"
 import SaveDataComponent from "./SaveComponent";
 import { ConfirmDeleteModal } from './ModalComponent'
 import { EDITOR_MIN_CONSTANT } from '../Data/ConstantValues'
@@ -62,7 +64,7 @@ const EditorComponent = ({ text }) => {
   }
 
   function CopyEditorContent(){
-
+    ClipBoardService.CopyToClipBoard(value)
     setCopyClipboardNotificationOpen(true)
   }
 
@@ -122,8 +124,8 @@ const EditorComponent = ({ text }) => {
               }
             }}
             style={{
-              width: "100%", // Half of the screen width
-                height: "55vh", // Full height
+              width: "100%",
+                height: "55vh",
                 padding: "20px",
                 boxSizing: "border-box",
                 overflowY: "auto",
