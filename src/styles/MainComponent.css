@@ -1,0 +1,23 @@
+.statusTextNotRecording{
+    border: 3px solid red;
+    color: red;
+    border-radius: 5px;
+    font-weight: bolder;
+    margin-bottom: 20px;
+    padding: 10px;
+    text-transform: uppercase;
+}
+
+.statusTextRecording{
+    border: 3px solid green;
+    color: green;
+    border-radius: 5px;
+    font-weight: bolder;
+    margin-bottom: 20px;
+    padding: 10px;
+    text-transform: uppercase;
+}
+
+button {
+    border-width: 2px !important;
+}
